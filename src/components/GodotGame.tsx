@@ -47,6 +47,7 @@ export default function GodotGame({ address }: { address: string }) {
       focusCanvas: true,
       gdextensionLibs: [],
       canvas: canvasRef.current,
+      mainPack: 'https://pub-d0a22ae00b7e4ba88d7fab67b772e4f7.r2.dev/index.pck', // 远程资源
     };
 
     // 确保canvas元素存在
