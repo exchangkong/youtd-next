@@ -220,9 +220,11 @@ export default function GodotGame({ address }: { address: string }) {
   return (
     <div className="godot-container">
       <div className="background-video">
+        {/** 
         <video autoPlay muted loop>
           <source src="/loading_screen.mp4" type="video/mp4" />
         </video>
+        */}
       </div>
 
       <canvas ref={canvasRef} id="canvas">
