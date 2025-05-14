@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1746805064|32435044535';
+const CACHE_VERSION = '1747133820|1258967390';
 /** @type {string} */
 const CACHE_PREFIX = 'YouTD 2-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
