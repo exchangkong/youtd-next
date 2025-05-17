@@ -9,6 +9,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Orcward</title>
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              Object.defineProperty(document, 'title', {
+                set: function () {
+                  console.warn('document.title edit');
+                },
+                get: function () {
+                  return 'Orcward';
+                },
+                configurable: true
+              });
+            `,
+          }}
+        />
         <Script
           src="/index.js"
           strategy="beforeInteractive"
