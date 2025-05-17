@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Orcward</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
