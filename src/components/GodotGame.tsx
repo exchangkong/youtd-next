@@ -43,7 +43,7 @@ export default function GodotGame({ address }: { address: string }) {
       canvasResizePolicy: 2,
       executable: "index",
       experimentalVK: false,
-      fileSizes: { "index.pck": 49994672, "index.wasm": 1642372 },
+      fileSizes: { "https://pub-d0a22ae00b7e4ba88d7fab67b772e4f7.r2.dev/index.pck": 108900000, "index.wasm": 1642372 },
       focusCanvas: true,
       gdextensionLibs: [],
       canvas: canvasRef.current,
