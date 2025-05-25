@@ -26,7 +26,22 @@ export default function Home() {
 
   return (
     <>
-      <main className="game-container">
+      <main className="game-container relative">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            onError={(e) => console.error("Video failed to load:", e)}
+            onLoadStart={() => console.log("Video loading started")}
+            onCanPlay={() => console.log("Video can play")}
+          >
+            <source src="/index.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         {isLogin ? (
           <GodotGame address={address} />
         ) : (
