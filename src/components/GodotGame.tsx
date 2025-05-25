@@ -48,6 +48,7 @@ export default function GodotGame({ address }: { address: string }) {
       gdextensionLibs: [],
       canvas: canvasRef.current,
       mainPack: 'https://pub-d0a22ae00b7e4ba88d7fab67b772e4f7.r2.dev/index.pck', // 远程资源
+      // mainPack: 'index.pck', // 远程资源
     };
 
     // 确保canvas元素存在
@@ -63,26 +64,25 @@ export default function GodotGame({ address }: { address: string }) {
     // 钱包地址设置函数
     function trySetWalletAddress(
       address: string,
-      maxRetries = 10,
+      maxRetries = 50,
       interval = 3000
     ) {
       let retries = 0;
 
       function attempt() {
         if (typeof window.set_wallet_address === "function") {
-          console.log("成功调用 set_wallet_address");
+          console.log("success call set_wallet_address");
           window.set_wallet_address(address);
           return true;
         } else if (retries < maxRetries) {
           console.log(
-            `等待 set_wallet_address 函数可用，尝试 ${retries + 1
+            `wait set_wallet_address ava，retry ${retries + 1
             }/${maxRetries}`
           );
           retries++;
           setTimeout(attempt, interval);
           return false;
         } else {
-          console.error("set_wallet_address 函数在多次尝试后仍不可用");
           return false;
         }
       }
